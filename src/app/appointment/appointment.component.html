@@ -1,0 +1,48 @@
+<h2 class="text-center p-1 m-3">Appointment Form</h2>
+<div class="container my-3 p-4 mx-auto bg-dark text-light">
+    <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" class="row g-3">
+      <h2>Contact Information</h2>
+      <div class="col-sm-6">
+        <label for="fname" class="form-label">Patient Name</label>
+        <input ngModel type="text" class="form-control bg-transparent text-light" id="fname" name="patientname">
+      </div>
+      <div class="col-sm-6">
+        <label  class="form-label bg-transparent" for="number">Phone number</label>
+        <input ngModel type="number" class="form-control bg-transparent text-light" name="phoneno" id="number">
+      </div>
+      <div class="form-floating mb-3 col-sm-4 bg-transparent">
+        <label for="gen" class="form-label bg-transparent">Gender</label>
+        <select class="form-control bg-transparent" ngModel class="form-select" id="gen" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Others</option>
+        </select>
+      </div>
+      <h2>Appointment Information</h2>
+      <div class="col-sm-12">
+        <label for="appdate" class="form-label">Appointment date</label>
+        <input ngModel type="date" class="form-control bg-transparent text-light" id="appdate" name="appointdate">
+      </div>
+      <div class="col-sm-6  bg-transparent">
+        <h4>Time Interval</h4>
+        <input ngModel type="radio" id="t1" name="timeint" value="Morning">
+        <label for="t1">Morning</label><br>
+        <input ngModel type="radio" id="t2" name="timeint" value="Afternoon">
+        <label for="t2">Afternoon</label><br>
+        <input ngModel type="radio" id="t3" name="timeint" value="Evening">
+        <label for="t3">Evening</label>
+      </div>
+      <div class="col-sm-12  bg-transparent">
+        <h4>Details</h4>
+        <input ngModel type="radio" id="t1" name="details" value="Accident">
+        <label for="t1">Accident</label><br>
+        <input ngModel type="radio" id="t2" name="details" value="Mild disease">
+        <label for="t2">Mild disease</label><br>
+        <input ngModel type="radio" id="t3" name="details" value="Viral Fever">
+        <label for="t3">Viral disease</label>  
+      </div>
+      <div class="col-12 text-center p-3 mt-3">
+        <button type="submit" class="btn btn-success px-4"><h5>Book Appointment</h5></button>
+      </div>
+  </form>
+  </div>

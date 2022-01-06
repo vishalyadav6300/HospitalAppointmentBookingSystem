@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <h2 class="text-center"></h2>
+    <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+          <div class="row border w-50 mx-auto m-3 p-5">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">Admin</button>
+              <button type="button" class="btn btn-primary">User</button>
+            </div>
+            <div class="form-floating mb-3 p-1">
+                <input ngModel type="email" class="form-control" id="floatingInput" placeholder="username" name="username">
+                <label for="floatingInput">Username</label>
+              </div>
+            <div class="form-floating mb-3 p-1">
+                <input ngModel type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-secondary w-25 p-2">Login</button> 
+            </div>    
+          </div>
+    </form>
+</div>

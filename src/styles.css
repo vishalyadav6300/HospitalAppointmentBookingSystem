@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+/* body{
+    background-image: url('https://www.mediflam.com/blog/wp-content/uploads/2021/09/people-walking-sitting-hospital-building-city-clinic-glass-exterior-flat-vector-illustration-medical-help-emergency-architecture-healthcare-concept_74855-10130-1.jpg');
+    background-repeat:no-repeat;
+    background-size: 100%;
+} */
+.btn btn-success btn-outline-dark p-3 rounded rounded-pill mx-2{
+    background-color: aliceblue;
+    color: black;
+}

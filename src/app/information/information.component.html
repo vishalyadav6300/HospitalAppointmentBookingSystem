@@ -1,0 +1,40 @@
+<div class="container pb-4">
+    <div class="row my-5">
+        <div class="col-4 mx-auto">
+            <button class="btn btn-dark ps-2 pe-2 d-block mx-auto" (click)="inqApp()">InQueue</button>
+        </div>
+        <div class="col-4 mx-auto">
+            <button class="btn btn-dark ps-2 pe-2 d-block mx-auto" (click)="appApp()">Approved</button>    
+        </div>
+        <div class="col-4 mx-auto">
+            <button class="btn btn-dark ps-2 pe-2 d-block mx-auto" (click)="rejectApp()">Rejected</button>    
+        </div>   
+    </div>
+    <table class="table table-dark table-hover">
+        <thead>
+             <tr>
+                 <th>Username</th>
+                 <th>PatientName</th>
+                 <th>AppointmentDate</th>
+                 <th>Session</th>
+                 <th>Reason</th>
+                 <th>Status</th>
+                 <th *ngIf="display"></th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let appObj of selected;let ind=index">
+                <td>{{appObj.username}}</td>
+                <td>{{appObj.patientname}}</td>
+                <td>{{appObj.appointdate}}</td>
+                <td>{{appObj.timeint}}</td>
+                <td>{{appObj.details}}</td>
+                <td>{{appObj.approve}}</td>
+                <td *ngIf="display">
+                    <button class="btn btn-danger me-3" (click)="notApproveAppointment(appObj)"><i class="fas fa-trash-alt"></i></button>
+                    <button class="btn btn-danger" (click)="approveAppointment(appObj)"><i class="fas fa-check-square"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

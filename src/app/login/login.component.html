@@ -1,0 +1,28 @@
+<div class="container text-center">
+    <h2 class="text-center my-5 p-3">Login Form</h2>
+    <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+          <div class="row border border-dark w-50 mx-auto mt-4 p-5 rounded bg-dark">
+            <div class="col-6 mx-auto" aria-label="Basic example">
+              <button type="button" class="btn btn-light text-dark p-2 w-50" (click)="changeValueA()">Admin</button>
+            </div>
+            <div class="col-6 mx-auto" aria-label="Basic example">
+              <button type="button" class="btn btn-light text-dark  p-2 w-50" (click)="changeValueU()">User</button>
+            </div>
+            <div class="form-floating mb-3 mt-5 p-1 text-secondary">
+                <input ngModel type="email" class="form-control bg-transparent text-light" id="floatingInput" placeholder="Username" name="username">
+                <label for="floatingInput">Username</label>
+              </div>
+            <div class="form-floating mb-3 p-1 text-secondary">
+                <input ngModel type="password" class="form-control bg-transparent text-light" id="floatingPassword" placeholder="Password" name="password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="text-center" *ngIf="!bool">
+                <button type="submit" class="btn btn-light text-dark  w-25 p-2">Login</button> 
+            </div>   
+            <div class="" *ngIf="bool">
+                <button type="submit" class="btn btn-light text-dark  w-25 px-3 py-1 mx-2">Login</button>
+                <button class="btn btn-light text-dark  w-25 px-3 py-1 mx-2" (click)="onRegister()">Register</button>
+            </div> 
+          </div>
+    </form>
+</div>
