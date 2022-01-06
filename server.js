@@ -16,7 +16,7 @@ app.use(exp.json());
 app.use(exp.static(path.join(__dirname,'./dist/APPOINTMENTSYSTEM/')));
 
 
-let dburl="mongodb+srv://Vishal:vish6300@vishal.jjymm.mongodb.net/Hospital?retryWrites=true&w=majority";
+let dburl="DATABASE URL";
 let databaseObj;
 let appointmentCollectionObj,loginCollectionObj,usersCollectionObj;
 mongodbclient.connect(dburl,{useNewUrlParser:true,useUnifiedTopology:true},(error,client)=>{
